@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: teleport
-  namespace: teleport
 spec:
   interval: 5m
   url: https://charts.releases.teleport.dev
@@ -11,14 +10,13 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: teleport-cluster
-  namespace: teleport
 spec:
   interval: 10m
   timeout: 5m
   chart:
     spec:
       chart: teleport-cluster
-      version: "17.1.3"
+      version: "16.4.2"
       sourceRef:
         kind: HelmRepository
         name: teleport
@@ -28,36 +26,20 @@ spec:
     chartMode: standalone
     clusterName: teleport.nce.wtf
     kubeClusterName: oci
-    proxyListenerMode: separate
-    auth:
-      teleportConfig:
-        auth_service:
-          authentication:
-            type: github
-    authentication:
-      type: github
-      localAuth: true
-      secondFactor: on
+    proxyListenerMode: multiplex
     highAvailability:
       replicaCount: 1
       certManager:
-        enabled: false
+        enabled: true
+        issuerName: letsencrypt
     ingress:
       enabled: true
       suppressAutomaticWildcards: true
       spec:
         ingressClassName: nginx
-    tls:
-      existingSecretName: teleport-tls
     proxy:
-      highAvailability:
-        replicaCount: 1
-      service:
-        type: ClusterIP
       annotations:
         ingress:
-          # this needs to be removed for http challenge
-          # oracle dns is not supported for dns challenge
           nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
           cert-manager.io/cluster-issuer: letsencrypt
           acme.cert-manager.io/http01-edit-in-place: "true"
