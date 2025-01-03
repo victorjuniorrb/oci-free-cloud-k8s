@@ -44,6 +44,8 @@ spec:
       spec:
         ingressClassName: nginx
     proxy:
+      service:
+        type: ClusterIP
       annotations:
         ingress:
           # this needs to be removed for http challenge

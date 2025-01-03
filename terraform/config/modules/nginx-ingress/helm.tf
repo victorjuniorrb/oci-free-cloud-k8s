@@ -22,7 +22,7 @@ controller:
   service:
     annotations:
       oci.oraclecloud.com/load-balancer-type: "nlb"
-      oci.oraclecloud.com/oci-network-security-groups: ${oci_core_network_security_group.ingress_lb.id}
+      oci-network-load-balancer.oraclecloud.com/oci-network-security-groups: ${oci_core_network_security_group.ingress_lb.id}
     externalTrafficPolicy: "Local"
     nodePorts:
       https: "30443"
