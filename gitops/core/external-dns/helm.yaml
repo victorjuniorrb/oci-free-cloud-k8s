@@ -35,5 +35,4 @@ spec:
       - name: config
         mountPath: /etc/kubernetes/
     extraArgs:
-      - --exclude-private-ips
-      - --oci-prefer-cname-records=false
+      - --oci-zone-scope=GLOBAL
