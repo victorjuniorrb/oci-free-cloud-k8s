@@ -72,3 +72,22 @@ resource "oci_core_security_list" "public_subnet_sl" {
     }
   }
 }
+
+# for network load balancer
+# https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingnetworkloadbalancers.htm
+resource "oci_core_security_list" "nlb_private_subnet_sl" {
+  compartment_id = var.compartment_id
+  vcn_id         = module.vcn.vcn_id
+  display_name   = "nlb-k8s-private-subnet-sl"
+
+  ingress_security_rules {
+    stateless   = false
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    protocol    = "6"
+    tcp_options {
+      min = 30000
+      max = 32767
+    }
+  }
+}
