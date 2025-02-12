@@ -3,22 +3,9 @@
 
 provider "registry.terraform.io/oracle/oci" {
   version     = "6.23.0"
-  constraints = "~> 6.23.0"
+  constraints = ">= 4.67.3, ~> 6.23.0"
   hashes = [
-    "h1:30tdVVrziwSoZOA2+TFAguvQcQ1VGsQOwwt7AOmB8aY=",
-    "h1:B8GsVrcDuyLMA6GeeCFmBlPKRidiW0PFHms8sR6/vAQ=",
-    "h1:DvTLCy1NJx+2N1EOwpzH5alt4xrx6hxJ6FfdcOCEWio=",
     "h1:MdP1x9SlYdpajRTnBDApQui8GNCIHhKKlFpTN4y9saA=",
-    "h1:QNXr0cw3MCHIml2k5SDj2gXJBXgIcOiTSNoR1r9a6Wo=",
-    "h1:b0UFC2Y6nzMbEneI3WnOe1w3Up1TC2kumRhH2/kpaO4=",
-    "h1:biH3ZvJa5vuAImnU2nXjLxAhUMdZ21ZVupFtg55kgcw=",
-    "h1:cbuqBCa2icwDmEUxPUR+g+ErBvqUw4IaMzVdH57IhRI=",
-    "h1:ghgq8TmkGAAdBS2z7dDfjTVK4zl1tLqrdVr/gFxUWI0=",
-    "h1:gy/Y8vK4AucNhynkphAMciQFQVnjyaeSXfIkEzgBCTs=",
-    "h1:mO3W0+nbMVOG4Tkr/wFWwKfhW6K8FIhoxPty5FBnnCk=",
-    "h1:up1chj1ofyVYQ1zOGFjbgIClWRYTF3I2JgJmQK8KccY=",
-    "h1:xKni7QL5CjDSH/g3eVAGkG3dZcGETYJhUn7LmSJqm8I=",
-    "h1:xa1CqMr0WdEt8SV5CnLL2f/Dsp61Ke8W1J7yWfL8LLg=",
     "zh:0330fe4129f49c80fb68f0cbe61647f5eeed1dabc37eea04a917f9d6ce3fb42e",
     "zh:4d35e6788327122097a6493bc353c9dcbbfffb6b42b733995ae91112e8803358",
     "zh:52762fa425359d1d082b92344928f1e2ff864384b705e9ea7358711d056741a7",

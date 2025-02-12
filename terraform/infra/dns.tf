@@ -1,11 +1,11 @@
-resource "oci_dns_zone" "klangregen_zone" {
+resource "oci_dns_zone" "victor_zone" {
   compartment_id = var.compartment_id
-  name           = var.klangregen_domain_name
+  name           = var.victor_domain_name
   zone_type      = "PRIMARY"
 }
 
-resource "oci_dns_zone" "wtf_zone" {
+resource "oci_dns_zone" "cett_zone" {
   compartment_id = var.compartment_id
-  name           = var.wtf_domain_name
+  name           = var.cett_domain_name
   zone_type      = "PRIMARY"
 }
