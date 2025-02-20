@@ -14,6 +14,8 @@ kind: Secret
 metadata:
   name: oracle-vault
   namespace: external-secrets
+  labels: 
+    type: oracle
 type: Opaque
 data:
   privateKey: ${base64encode(tls_private_key.external_secrets.private_key_pem)}
