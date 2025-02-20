@@ -4,6 +4,7 @@ module "externalsecrets" {
   compartment_id = var.compartment_id
   tenancy_id     = var.tenancy_id
   vault_id       = var.vault_id
+  region         = var.region
 
   depends_on = [
     module.fluxcd
@@ -25,18 +26,20 @@ module "ingress" {
 module "externaldns" {
   source = "./modules/external-dns"
 
-  compartment_id = var.compartment_id
+  # compartment_id = var.compartment_id
+  compartment_id = var.tenancy_id
 }
 
-module "homelab" {
-  source = "./modules/homelab"
+# module "homelab" {
+#   source = "./modules/homelab"
 
-  group_id       = module.externaldns.dns_group_id
-  compartment_id = var.compartment_id
-}
+#   group_id       = module.externaldns.dns_group_id
+#   compartment_id = var.compartment_id
+# }
 
 module "grafana" {
   source = "./modules/grafana"
 
-  compartment_id = var.compartment_id
+  # compartment_id = var.compartment_id
+  compartment_id = var.tenancy_id
 }

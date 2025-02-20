@@ -13,10 +13,10 @@ terraform {
     bucket                      = "terraform-states"
     key                         = "config/terraform.tfstate"
     endpoints = {
-          s3                    = "https://frrwy4uskhkj.compat.objectstorage.eu-frankfurt-1.oraclecloud.com"
+          s3                    = "https://idhjgdq0ffvl.compat.objectstorage.us-ashburn-1.oraclecloud.com"
     }
-    region                      = "eu-frankfurt-1"
-    shared_credentials_files    = ["~/.oci/config"]
+    region                      = "us-ashburn-1"
+    shared_credentials_files    = [ "~/.oci/terraform-states.key" ]
     skip_region_validation      = true
     skip_credentials_validation = true
     skip_requesting_account_id  = true

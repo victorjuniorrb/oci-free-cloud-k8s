@@ -2,7 +2,7 @@ resource "oci_identity_user" "homelab" {
   compartment_id = var.compartment_id
   description    = "Homelab"
   name           = "Homelab"
-  email          = "770135+nce@users.noreply.github.com"
+  email          = "55455285+victorjuniorrb@users.noreply.github.com"
 }
 
 resource "tls_private_key" "homelab" {

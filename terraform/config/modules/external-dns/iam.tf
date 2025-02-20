@@ -8,7 +8,7 @@ resource "oci_identity_user" "external_dns" {
   compartment_id = var.compartment_id
   description    = "ExternalDNS"
   name           = "ExternalDNS"
-  email          = "770135+nce@users.noreply.github.com"
+  email          = "55455285+victorjuniorrb@users.noreply.github.com"
 }
 
 resource "tls_private_key" "external_dns" {
