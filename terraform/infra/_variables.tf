@@ -42,16 +42,16 @@ variable "image_id" {
   default = "ocid1.image.oc1.iad.aaaaaaaainz5mpviqajnrzj3dnaw4j6uxbvxv2ree4syrg5cf4647qhatdlq"
 }
 
-variable "victor_domain_name" {
-  description = "Main DNS Zone"
-  type        = string
-
-  default = "oci.infra.ufg.br"
-}
-
 variable "cett_domain_name" {
-  description = "DNS Zone"
+  description = "Main DNS Zone"
   type        = string
 
   default = "oci.cett.dev.br"
 }
+
+# variable "victor_domain_name" {
+#   description = "DNS Zone"
+#   type        = string
+
+#   default = "oci.infra.ufg.br"
+# }
