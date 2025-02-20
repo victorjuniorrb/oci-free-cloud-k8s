@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  name: echo-ingress
+  labels:
+    name: echo-ingress
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - echo1.oci.cett.dev.br
+    - echo2.oci.cett.dev.br
+    secretName: echo-tls
+  rules:
+  - host: echo1.oci.cett.dev.br
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: echo1
+            port: 
+              number: 80
+  - host: echo2.oci.cett.dev.br
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: echo2
+            port: 
+              number: 80
