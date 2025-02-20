@@ -6,7 +6,7 @@ variable "gh_token" {
 variable "gh_org" {
   type = string
 
-  default = "nce"
+  default = "victorjuniorrb"
 }
 
 variable "gh_repository" {
