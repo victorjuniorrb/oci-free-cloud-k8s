@@ -1,7 +1,7 @@
 module "externalsecrets" {
   source = "./modules/external-secrets"
 
-  compartment_id = var.compartment_id
+  compartment_id = var.tenancy_id
   tenancy_id     = var.tenancy_id
   vault_id       = var.vault_id
   region         = var.region
@@ -26,7 +26,6 @@ module "ingress" {
 module "externaldns" {
   source = "./modules/external-dns"
 
-  # compartment_id = var.compartment_id
   compartment_id = var.tenancy_id
 }
 
@@ -40,6 +39,5 @@ module "externaldns" {
 module "grafana" {
   source = "./modules/grafana"
 
-  # compartment_id = var.compartment_id
   compartment_id = var.tenancy_id
 }
