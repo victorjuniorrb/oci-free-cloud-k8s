@@ -17,7 +17,7 @@ metadata:
   labels: 
     type: oracle
 type: Opaque
-data:
+stringData:
   privateKey: ${base64encode(tls_private_key.external_secrets.private_key_pem)}
   fingerprint: ${base64encode(oci_identity_api_key.external_secrets.fingerprint)}
 YAML
