@@ -19,7 +19,7 @@ spec:
   chart:
     spec:
       chart: dex
-      version: '0.20.0'
+      version: '0.22.0'
       sourceRef:
         kind: HelmRepository
         name: dex
@@ -89,11 +89,11 @@ spec:
             clientSecret: $GITHUB_CLIENT_SECRET
             redirectURI: https://login.oci.cett.dev.br/dex/callback
             orgs:
-              - name: nce-acme
+              - name: victorjuniorrb-acme
                 # A white list of teams. Only include group claims for these teams.
                 teams:
                   - admin
-                  - zuschauer
+                  - victorjunior
             # Flag which indicates that all user groups and teams should be loaded.
             loadAllGroups: false
 
