@@ -22,7 +22,7 @@ variable "kubernetes_version" {
   description = "Version of Kubernetes"
   type        = string
 
-  default = "v1.31.1"
+  default = "v1.29.1"
 }
 
 variable "kubernetes_worker_nodes" {
@@ -38,8 +38,8 @@ variable "image_id" {
   description = "OCID of the latest oracle linux"
   type        = string
 
-  # Oracle-Linux-8.10-aarch64-2024.09.30-0-OKE-1.31.1-747
-  default = "ocid1.image.oc1.iad.aaaaaaaainz5mpviqajnrzj3dnaw4j6uxbvxv2ree4syrg5cf4647qhatdlq"
+  # Oracle-Linux-8.10-aarch64-2024.06.30-0-OKE-1.29.1-716
+  default = "ocid1.image.oc1.iad.aaaaaaaabnytlakzsgdfnxzd2nqm676scsjy3npqs3m5aqk6gecmwf2tpl5q"
 }
 
 variable "cett_domain_name" {
