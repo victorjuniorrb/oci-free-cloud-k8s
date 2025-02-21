@@ -14,10 +14,8 @@ kind: Secret
 metadata:
   name: oracle-vault
   namespace: external-secrets
-  labels: 
-    type: oracle
 type: Opaque
-stringData:
+data:
   privateKey: ${base64encode(tls_private_key.external_secrets.private_key_pem)}
   fingerprint: ${base64encode(oci_identity_api_key.external_secrets.fingerprint)}
 YAML
@@ -26,7 +24,7 @@ YAML
 resource "kubectl_manifest" "external_secrets_cluster_store" {
   yaml_body = <<YAML
 apiVersion: external-secrets.io/v1beta1
-kind: SecretStore
+kind: ClusterSecretStore
 metadata:
   name: oracle-vault
 spec:
