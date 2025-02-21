@@ -10,13 +10,13 @@ terraform {
   #}
 
   backend "s3" {
-    bucket                      = "terraform-states"
+    bucket                      = "oke-terraform-states"
     key                         = "config/terraform.tfstate"
     endpoints = {
           s3                    = "https://idhjgdq0ffvl.compat.objectstorage.us-ashburn-1.oraclecloud.com"
     }
     region                      = "us-ashburn-1"
-    shared_credentials_files    = [ "~/.oci/terraform-states.key" ]
+    shared_credentials_files    = [ "~/.oci/os-terraform-states.key" ]
     skip_region_validation      = true
     skip_credentials_validation = true
     skip_requesting_account_id  = true
