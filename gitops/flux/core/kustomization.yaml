@@ -6,8 +6,8 @@ resources:
   - ../../core/cert-manager/controller/flux.yaml
   - ../../core/cert-manager/issuer/flux.yaml
   - ../../core/dex/flux.yaml
-  - ../../core/grafana/flux.yaml
-  - ../../core/longhorn/flux.yaml
+  # - ../../core/grafana/flux.yaml
+  # - ../../core/longhorn/flux.yaml
   # - ../../core/lychee/flux.yaml
-  - ../../core/prometheus/flux.yaml
+  # - ../../core/prometheus/flux.yaml
   # - ../../core/teleport/flux.yaml
