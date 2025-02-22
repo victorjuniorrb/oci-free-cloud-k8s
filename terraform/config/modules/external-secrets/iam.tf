@@ -37,7 +37,7 @@ resource "oci_identity_policy" "external_secrets" {
   description    = "allow vault management"
   name           = "VaultAdmins"
   statements = [
-    "Allow group 'Default'/'VaultAdmins' to manage secret-family in tenancy",
-    "Allow group 'Default'/'VaultAdmins' to manage vault in tenancy"
+    "Allow group VaultAdmins to manage secret-family in tenancy",
+    "Allow group VaultAdmins to manage vault in tenancy"
   ]
 }
