@@ -38,6 +38,6 @@ resource "oci_identity_policy" "test_policy" {
   description    = "allow dns management"
   name           = "DNSAdmins"
   statements = [
-    "Allow group DNSAdmins to manage DNS in tenancy"
+    "Allow group 'Default'/'DNSAdmins' to manage DNS in tenancy"
   ]
 }

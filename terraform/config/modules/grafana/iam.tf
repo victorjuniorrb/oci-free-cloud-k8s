@@ -16,7 +16,7 @@ resource "oci_identity_policy" "grafana" {
   description    = "allow metrics"
   name           = "Monitoring"
   statements = [
-    "Allow dynamic-group grafana to read metrics in tenancy",
-    "Allow dynamic-group grafana to read compartments in tenancy"
+    "Allow dynamic-group 'Default'/'grafana' to read metrics in tenancy",
+    "Allow dynamic-group 'Default'/'grafana' to read compartments in tenancy"
   ]
 }
