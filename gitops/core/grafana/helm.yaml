@@ -51,7 +51,7 @@ spec:
         auth_url: https://login.oci.cett.dev.br/dex/auth
         token_url: https://login.oci.cett.dev.br/dex/token
         api_url: https://login.oci.cett.dev.br/dex/userinfo
-        role_attribute_path: contains(groups[*], 'victorjuniorrb-acme:admin') && 'Admin' || 'Viewer'
+        role_attribute_path: contains(groups[*], 'victorjuniorrb:admin') && 'Admin' || 'Viewer'
 
     extraSecretMounts:
       - name: dex-grafana-client
